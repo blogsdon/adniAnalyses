@@ -1,5 +1,8 @@
 #get coordinates
-source('reduceToFunctionalAnnotation2.R')
+source('adniAnalyses/reduceToFunctionalAnnotation2.R')
+source('adniAnalyses/extractSnps.R')
+source('adniAnalyses/isValidAlias.R')
+
 for (i in 22:1){
 	reduceToFunctionalAnnotation2(i)
 }
@@ -95,7 +98,7 @@ save(rareVariantData,file='rareVariants2.rda')
 
 
 #run plink to extract data 
-a <- extractSnps()
+#a <- extractSnps()
 
 
 
@@ -104,6 +107,6 @@ a <- extractSnps()
 #b <- functSnps()
 
 #run analysis
-res <- runAnalysis()
+#res <- runAnalysis()
 
 
