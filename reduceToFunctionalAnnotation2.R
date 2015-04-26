@@ -5,9 +5,9 @@ reduceToFunctionalAnnotation2 <- function(chr){
 	func <- union(grep('splice_donor',conse),grep('stop',conse))
 	func <- union(func,grep('splice_acceptor',conse))
 	func <- union(func,grep('missense',conse))
-	func <- union(func,grep('intron'))
-	func <- union(func,grep('synonymous'))
-	func <- union(func,grep('splice'))
+	func <- union(func,grep('intron',conse))
+	func <- union(func,grep('synonymous',conse))
+	func <- union(func,grep('splice',conse))
 	x2 <- x1[func,]
 	x3 <- x2[!duplicated(x2$Location),]
 	write.table(x3,file=paste('adniWGSchr',chr,'functional2.vout',sep=''))
