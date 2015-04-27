@@ -91,6 +91,7 @@ for (i in 1:22){
 	while(currentChr==i){
 	currentChr <- as.numeric(geneTable2[count,3])		
 		try(rareVariantData[[count]] <- extractSnps2(geneTable2[count,1],snpFunction),silent=TRUE)
+	save(rareVariantData,file='rareVariants3.rda')
 		count <- count+1
 		print(count)
 	}
